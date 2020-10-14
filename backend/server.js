@@ -4,6 +4,10 @@ import products from './data/products.js'
 
 dotenv.config()
 
+import connectDB from './config/db.js'
+
+connectDB()
+
 const app = express()
 
 app.get('/',(req,res) => {
