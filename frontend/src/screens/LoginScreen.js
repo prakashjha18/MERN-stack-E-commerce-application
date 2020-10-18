@@ -7,7 +7,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
-const LoginScreen = ({ location,history }) => {
+const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -27,7 +27,6 @@ const LoginScreen = ({ location,history }) => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
-    //DISPATCH LOGIN
   }
 
   return (
@@ -45,6 +44,7 @@ const LoginScreen = ({ location,history }) => {
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
         <Form.Group controlId='password'>
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -54,10 +54,12 @@ const LoginScreen = ({ location,history }) => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
         <Button type='submit' variant='primary'>
           Sign In
         </Button>
       </Form>
+
       <Row className='py-3'>
         <Col>
           New Customer?{' '}

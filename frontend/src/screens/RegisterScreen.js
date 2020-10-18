@@ -29,17 +29,16 @@ const RegisterScreen = ({ location, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    //DISPATCH REGISTER
-    if(password!==confirmPassword){
-        setMessage('Passwords do not match')
-    } else { 
-        dispatch(register(name,email,password))
+    if (password !== confirmPassword) {
+      setMessage('Passwords do not match')
+    } else {
+      dispatch(register(name, email, password))
     }
   }
 
   return (
     <FormContainer>
-      <h1>Sign UP</h1>
+      <h1>Sign Up</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
@@ -83,13 +82,15 @@ const RegisterScreen = ({ location, history }) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
         <Button type='submit' variant='primary'>
           Register
         </Button>
       </Form>
+
       <Row className='py-3'>
         <Col>
-          Have an account?{' '}
+          Have an Account?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
             Login
           </Link>
