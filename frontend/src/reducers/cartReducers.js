@@ -41,6 +41,7 @@ export const cartReducer = (state = { cartItems:[], shippingAddress: {}},action)
             }  
         case CART_DELETE_ALL:
             return {
+                ...state,
                 cartItems:[],
             }  
         default:
