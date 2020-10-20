@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import CheckoutSteps from '../components/CheckoutSteps'
 import { createOrder } from '../actions/orderActions'
+import Loader from '../components/Loader'
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch()
@@ -28,7 +29,7 @@ const PlaceOrderScreen = ({ history }) => {
   ).toFixed(2)
 
   const orderCreate = useSelector((state) => state.orderCreate)
-  const { order, success, error } = orderCreate
+  const { order, success, error,loading } = orderCreate
 
   useEffect(() => {
     if (success) {
@@ -75,6 +76,7 @@ const PlaceOrderScreen = ({ history }) => {
 
             <ListGroup.Item>
               <h2>Order Items</h2>
+              {loading && <Loader />}
               {cart.cartItems.length === 0 ? (
                 <Message>Your cart is empty</Message>
               ) : (
