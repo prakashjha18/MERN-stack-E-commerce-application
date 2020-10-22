@@ -2,8 +2,6 @@
 
 > eCommerce platform built with the MERN stack & Redux.
 
-This is the course project for my [MERN eCommerce From Scratch](https://www.udemy.com/course/mern-ecommerce) course
-
 ![screenshot](https://github.com/prakashjha18/MERN-stack-E-commerce-application/blob/master/uploads/Screen%20Shot%20app.png)
 
 ## Features
@@ -63,15 +61,6 @@ npm run dev
 npm run server
 ```
 
-## Build & Deploy
-
-```
-# Create frontend prod build
-cd frontend
-npm run build
-```
-
-There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
 
 ### Seed Database
 
