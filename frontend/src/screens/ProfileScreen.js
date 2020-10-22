@@ -38,6 +38,7 @@ const ProfileScreen = ({ location, history }) => {
         dispatch(getUserDetails('profile'))
         dispatch(listMyOrders())
       } else {
+        dispatch(listMyOrders())
         setName(user.name)
         setEmail(user.email)
       }
