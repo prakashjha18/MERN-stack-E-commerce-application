@@ -1,4 +1,5 @@
 {
+  "engines": { "node": ">=12.19.0" },
   "name": "e-commerr",
   "version": "1.0.0",
   "description": "MERN shopping cart app",
